@@ -3,11 +3,13 @@ const app= express(); // create an express app
 
 //routes import
 import userRouter from "./routes/user.route.js";
+import postRouter from "./routes/post.router.js";
 
 app.use(express.json());
 
 //routes declaration
 app.use("/api/users", userRouter);
+app.use("/api/posts", postRouter);
 
 //example route: http://localhost:4000/api/users/register
 export default app;
